@@ -1,5 +1,5 @@
 var startBttn= document.getElementById("start-button");
-var questionContainer= getElementById("question-container")
+var questionContainer= document.getElementById("question-container");
 var questions= document.getElementById("questions");
 var timer= document.getElementById("timer-counter");
 var submitBttn = document.getElementById("submit-button");
@@ -8,17 +8,17 @@ var playerScore= 0;
 var timeLeft= 60;
 var timerPenalty= 5;
 var highScores= JSON.parse(localStorage.getItem("playerScore"));
-var questionCounter= 1;
+
 
 startBttn.addEventListener('click', function(){ 
     startGame();
-    startTimer();
+    //startTimer();
 });
 
 function startGame(){
     startBttn.setAttribute("class", "hidden");
-    questionContainer.setAttribute("class","visible")
-    questions.innerHTML = questions[];
+    questionContainer.setAttribute("id","visible")
+    questions.innerHTML = questions[0];
 };
 
 questions = [ 
@@ -34,7 +34,8 @@ questions = [
     , 
     ""
 ];
-
+console.log("OK")
+/*
 answers = [
     answer1 = "Using the //"
     answer2 = "Using the /*"
