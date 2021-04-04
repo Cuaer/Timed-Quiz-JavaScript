@@ -25,25 +25,27 @@
 
     <!--Start Button-->
     <div id="start-button" class="visible">
-        <button id="start-bttn">Start</button>
+        <button id="start">Start</button>
     </div>
     
     <!-- Main Area-->
     <main>
         <!--Question and answer display area-->
         <div id="question-container" class="hidden">
-            <h2 id="questions"></h2> <!--To display question within header formatting-->
-                <div id="answers">
+            <h2 id="question-display"></h2> <!--To display question within header formatting-->
+                <div id="answer-container">
                     <ul>
-                        <li><button class="answers"></button></li>
-                        <!--<li><button class="answer-2"></button></li>    (Unsure if necessary)
-                        <li><button class="answer-3"></button></li>
-                        <li><button class="answer-4"></button></li>-->
+                        <li><button id="optionA" class="answer"></button></li>
+                        <li><button id="optionB" class="answer"></button></li>
+                        <li><button id="optionC" class="answer"></button></li>
+                        <li><button id="optionD" class="answer"></button></li>
                     </ul>
+
+                    
                 </div>
+        </div>
         <!--Timer Section containing the timer-->
-        <div id="timer-counter"></div> second(s) left!
-        </div> 
+        <div id="timer-counter" class="hidden"> second(s) left!</div>
         
         <!--End Game and High Score tracker-->
         <div id="game-Over-Screen" class="hidden">
@@ -55,7 +57,7 @@
         </div>    
     </main>
 
-    <footer>
+    <footer class="hidden">
         Made with ❤, CSS, and JavaScript
     </footer>
     

@@ -1,3 +1,4 @@
+// List of variables
 var startBttn= document.getElementById("start-button");
 var submitBttn = document.getElementById("submit-button");
 var questionContainer= document.getElementById("question-container");
@@ -13,6 +14,14 @@ var timeLeft= 60;
 var timerPenalty= 5;
 var highScores= JSON.parse(localStorage.getItem("playerScore"));
 var endGameNotif= document.getElementById("game-Over-Screen");
+var timer= document.getElementById("timer");
+var highScores= document.getElementById("userScore");
+
+startBttn.addEventListener('click', function(){
+    
+    startGame();
+    //startTimer();
+});
 
 function startGame(){
     startBttn.setAttribute("class", "hidden");
@@ -25,27 +34,25 @@ function startGame(){
     optionD.innerHTML = answersD [0];
 };
 
-startBttn.addEventListener('click', function(){
-    
-    startGame();
-    //startTimer();
+document.querySelectorAll('.answer').forEach(item=>{
+    item.addEventListener('click', event =>{
+        questions+ 1;
+        answersA+ 1;
+        answersB+ 1;
+        answersC+ 1;
+        answersD+ 1;
+    }) 
 });
-
 
 questions = [ 
     "How do you write a comment in JavaScript?"
     , 
     "Which of the following code will produce a random number?"
     , 
-    ""
+    "Which of the following is the correct way to annotate a variable named javaScript?"
     , 
-    ""
-    , 
-    ""
-    , 
-    ""
+    "Which event occurs when the user clicks on an HTML element?"
 ];
-console.log("OK");
 
 
 answersA= [
@@ -53,116 +60,55 @@ answersA= [
     ,
     "Math.random()"
     ,    
-    ""
+    "variable jS"
     ,
-    ""];
-
+    "onhover"
+];
+    
 answersB= [
-    "Using single quotations"
-    ,
-    "Math.floor()"
-    ,
-    "Math.round()"
-    ,
-    "Math.ceil()"
+        "Using single quotations"
+        ,
+        "Math.floor()"
+        ,
+        "variable jscript"
+        ,
+        "onclick.event"
 ];
-
+    
 answersC= [
-    "Using the /* symbols"
-    ,
-    ""
-    ,
-    ""
-    ,
-    ""
+        "Using the /* symbols"
+        ,
+        "Math.round()"
+        ,
+        "var java"
+        ,
+        "onclick"
 ];
-
+    
 answersD= [
-    "Using parenthesis"
-    ,
-    ""
-    ,
-    ""
-    ,
-    ""
+        "Using parenthesis"
+        ,
+        "Math.ceil()"
+        ,
+        "var javaScript"
+        ,
+        "click(this)"
 ];
-/*
-function startTimer(){
+/*Bugged submit button
+submitBttn.addEventListener("click", function(event) {
+    event.preventDefault();
+};
+
+//Bugged timer function
+/*function startTimer(){
     timerInterval= setInterval(function())[{
         timeLeft--;
         if (timeLeft = 0){
             clearInterval(timerInterval);
-            gameOver();
-        }
-        timer.textContent = timeLeft;
-    }
-}, 1000];
+            gameOver(){
+            timer.textContent = timeLeft;
+        };
+    }, 1000];
+    
 
-function gameOver(){
-
-};
-
-submitBttn.addEventListener("click", function(event) {
-    event.preventDefault();
-    saveLastGrade();
-    renderLastGrade();
-    });
-
-//var displayQuiz= document.getElementById("quiz-display");
-  
-/*var timer = document.getElementById("timer");
-var submitBttn =;
-var highScore =;
-
-
-
-let questions=[{
-    question= document.getElementById("questions"): "When was JavaScript first created?";
-    answer1: "In 1964";
-    answer2: "In 1999";
-    answer3: "In 1970";
-    answer4: "In 2000's";
-    },
-    {question: "When was JavaScript first created?";
-    answer1: "In 1964";
-    answer2: "In 1999";
-    answer3: "In 1970";
-    answer4: "In 2000's";
-    },
-    {question: "When was JavaScript first created?";
-    answer1: "In 1964";
-    answer2: "In 1999";
-    answer3: "In 1970";
-    answer4: "In 2000's";
-    },
-    {question: "When was JavaScript first created?";
-    answer1: "In 1964";
-    answer2: "In 1999";
-    answer3: "In 1970";
-    answer4: "In 2000's";
-}]
-
-let gameOver= questions.length-1{
-    if (gameOver=0) {
-        
-    }
-}
-
-
-
-function renderQuestions (){
-    let questions = 
-}
-
-
-
-
-//Timer settings
-const counterTime = 60;
-function timeDisplay(){
-    if(counter => )
-}
-
-if (i=<100){
-    timer decuction here
-}*/
+};*/
