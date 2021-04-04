@@ -1,6 +1,6 @@
 var startBttn= document.getElementById("start-button");
 var questionContainer= document.getElementById("question-container");
-var questions= document.getElementById("questions");
+var questionDisplay= document.getElementById("question-display");
 var timer= document.getElementById("timer-counter");
 var submitBttn = document.getElementById("submit-button");
 var answers= document.querySelector('#answers');
@@ -9,17 +9,17 @@ var timeLeft= 60;
 var timerPenalty= 5;
 var highScores= JSON.parse(localStorage.getItem("playerScore"));
 
+function startGame(){
+    startBttn.setAttribute("class", "hidden");
+    questionContainer.setAttribute("id","visible");
+    questionDisplay.innerHTML = questions[0];
+};
 
 startBttn.addEventListener('click', function(){ 
     startGame();
     //startTimer();
 });
 
-function startGame(){
-    startBttn.setAttribute("class", "hidden");
-    questionContainer.setAttribute("id","visible")
-    questions.innerHTML = questions[0];
-};
 
 questions = [ 
     "How do you write a comment in JavaScript?"
