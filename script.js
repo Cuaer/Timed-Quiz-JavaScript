@@ -1,13 +1,13 @@
 var startBttn= document.getElementById("start-button");
+var submitBttn = document.getElementById("submit-button");
 var questionContainer= document.getElementById("question-container");
 var questionDisplay= document.getElementById("question-display");
+var answerContainer= document.getElementById('answer-container');
 var timer= document.getElementById("timer-counter");
-var submitBttn = document.getElementById("submit-button");
-var answerDisplay= document.getElementById('answer-display');
-var answer1= document.querySelector("#answer-1")
-var answer2= document.querySelector("#answer-2")
-var answer3= document.querySelector("#answer-3")
-var answer4= document.querySelector("#answer-4")
+var optionA= document.getElementById("optionA");
+var optionB= document.getElementById("optionB");
+var optionC= document.getElementById("optionC");
+var optionD= document.getElementById("optionD");
 var playerScore= 0;
 var timeLeft= 60;
 var timerPenalty= 5;
@@ -19,7 +19,10 @@ function startGame(){
     questionContainer.setAttribute("class","visible");
     timer.setAttribute("class", "visible")
     questionDisplay.innerHTML = questions[0];
-    answer1.innerHTML = answers [0];
+    optionA.innerHTML = answersA [0];
+    optionB.innerHTML = answersB [0];
+    optionC.innerHTML = answersC [0];
+    optionD.innerHTML = answersD [0];
 };
 
 startBttn.addEventListener('click', function(){
@@ -44,33 +47,44 @@ questions = [
 ];
 console.log("OK");
 
-answers = [
 
-        "Using the //",
-        "Using the /*",
-        "Using parenthesis",
-        "Using single quotations"
+answersA= [
+    "Using the // symbols"
+    ,
+    "Math.random()"
+    ,    
+    ""
+    ,
+    ""];
+
+answersB= [
+    "Using single quotations"
+    ,
+    "Math.floor()"
+    ,
+    "Math.round()"
+    ,
+    "Math.ceil()"
 ];
-   /* ,
-    answer1 = "Math.floor()"
-    answer2 = "Math.random()"
-    answer3 = "Math.round()"
-    answer4 = "Math.ceil()"
+
+answersC= [
+    "Using the /* symbols"
     ,
-    answer1 =""
-    answer2 =""
-    answer3 =""
-    answer4 =""
+    ""
     ,
-    answer1 =""
-    answer2 =""
-    answer3 =""
-    answer4 =""
+    ""
     ,
-    answer1 =""
-    answer2 =""
-    answer3 =""
-    answer4 =""
+    ""
+];
+
+answersD= [
+    "Using parenthesis"
+    ,
+    ""
+    ,
+    ""
+    ,
+    ""
 ];
 /*
 function startTimer(){
