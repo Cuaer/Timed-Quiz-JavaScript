@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!--Head-->
+
+<head>
+   <title>Timed Quiz on JavaScript</title>
+   <meta charset="UTF-8" />
+   <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
+<!--Body-->
+<body>
+    <!--Header-->
+    <header>
+        <!--Quiz name and instructions-->
+        <h1>JavaScript</h1>
+        <p class="visible">Click the "Start" button to start the quiz</p>
+    </header>
+
+    <!--Nav--> 
+    <nav>
+        <!--No Nav bar but left this here in case time permits-->
+    </nav>
+
+    <!--Start Button-->
+    <div id="start-button" class="visible">
+        <button id="start-bttn">Start</button>
+    </div>
+    
+    <!-- Main Area-->
+    <main>
+        <!--Question and answer display area-->
+        <div id="question-container" class="hidden">
+            <h2 id="questions"></h2> <!--To display question within header formatting-->
+                <div id="answers">
+                    <ul>
+                        <li><button class="answers"></button></li>
+                        <!--<li><button class="answer-2"></button></li>    (Unsure if necessary)
+                        <li><button class="answer-3"></button></li>
+                        <li><button class="answer-4"></button></li>-->
+                    </ul>
+                </div>
+        <!--Timer Section containing the timer-->
+        <div id="timer-counter"></div> second(s) left!
+        </div> 
+        
+        <!--End Game and High Score tracker-->
+        <div id="game-Over-Screen" class="hidden">
+            <h3>You received a score of</h3>
+            <p id="userScore">!</p>
+            <!--Hidden High Score Input Section upon 'Game Over'-->
+            <textarea id="name-input" alt="Type your name here!"></textarea>
+            <button id="submit-button">Submit</button>
+        </div>    
+    </main>
+
+    <footer>
+        Made with ❤, CSS, and JavaScript
+    </footer>
+    
+    <!--JavaScript file source location-->
+    <script src="./script.js"></script>
+
+</body>
+</html>
