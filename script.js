@@ -3,19 +3,27 @@ var questionContainer= document.getElementById("question-container");
 var questionDisplay= document.getElementById("question-display");
 var timer= document.getElementById("timer-counter");
 var submitBttn = document.getElementById("submit-button");
-var answers= document.querySelector('#answers');
+var answerDisplay= document.getElementById('answer-display');
+var answer1= document.querySelector("#answer-1")
+var answer2= document.querySelector("#answer-2")
+var answer3= document.querySelector("#answer-3")
+var answer4= document.querySelector("#answer-4")
 var playerScore= 0;
 var timeLeft= 60;
 var timerPenalty= 5;
 var highScores= JSON.parse(localStorage.getItem("playerScore"));
+var endGameNotif= document.getElementById("game-Over-Screen");
 
 function startGame(){
     startBttn.setAttribute("class", "hidden");
-    questionContainer.setAttribute("id","visible");
+    questionContainer.setAttribute("class","visible");
+    timer.setAttribute("class", "visible")
     questionDisplay.innerHTML = questions[0];
+    answer1.innerHTML = answers [0];
 };
 
-startBttn.addEventListener('click', function(){ 
+startBttn.addEventListener('click', function(){
+    
     startGame();
     //startTimer();
 });
@@ -34,35 +42,37 @@ questions = [
     , 
     ""
 ];
-console.log("OK")
-/*
+console.log("OK");
+
 answers = [
-    answer1 = "Using the //"
-    answer2 = "Using the /*"
-    answer3 = "Using parenthesis"
-    answer4 = "Using single quotations"
-    ,
+
+        "Using the //",
+        "Using the /*",
+        "Using parenthesis",
+        "Using single quotations"
+];
+   /* ,
     answer1 = "Math.floor()"
     answer2 = "Math.random()"
     answer3 = "Math.round()"
     answer4 = "Math.ceil()"
     ,
-    answer1 =
-    answer2 =
-    answer3 =
-    answer4 =
+    answer1 =""
+    answer2 =""
+    answer3 =""
+    answer4 =""
     ,
-    answer1 =
-    answer2 =
-    answer3 =
-    answer4 =
+    answer1 =""
+    answer2 =""
+    answer3 =""
+    answer4 =""
     ,
-    answer1 =
-    answer2 =
-    answer3 =
-    answer4 =
+    answer1 =""
+    answer2 =""
+    answer3 =""
+    answer4 =""
 ];
-
+/*
 function startTimer(){
     timerInterval= setInterval(function())[{
         timeLeft--;
